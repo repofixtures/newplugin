@@ -58,7 +58,7 @@
         <source-file src="src/ios/frameworks/libContext.a" framework="true" />
 
         <!-- Headers of context framework -->
-        <header-file src="src/ios/frameworks/include/IntelCloudServicesPlatformSDK.h" target-dir="contextlib" />
+        <header-file src="src/ios/frameworks/include/*.h" target-dir="contextlib" />
 
         <!--Copy the native files:-->
         <header-file src="src/ios/IntelSDKPlugin.h" />
