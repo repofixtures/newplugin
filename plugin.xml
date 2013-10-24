@@ -45,6 +45,11 @@
         </config-file>
 
         <framework src="libsqlite3.dylib" />
+        <framework src="MediaPlayer.framework" />
+        <framework src="AddressBook.framework" />
+        <framework src="CoreTelephony.framework" />
+        <framework src="EventKit.framework" />
+        <framework src="SystemConfiguration.framework" />
          
         <!--Copy the native files:-->
         <header-file src="src/ios/IntelSDKPlugin.h" />
