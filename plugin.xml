@@ -57,10 +57,14 @@
         <!-- Copy the libraries Context SDK -->
         <source-file src="src/ios/frameworks/libContext.a" framework="true" />
 
+        <!-- Headers of context framework -->
+        <header-file src="src/ios/frameworks/include/IntelCloudServicesPlatformSDK.h" target-dir="contextlib" />
+
         <!--Copy the native files:-->
         <header-file src="src/ios/IntelSDKPlugin.h" />
         <source-file src="src/ios/IntelSDKPlugin.m" />
         <header-file src="src/ios/ContextSDKPlugin.h" />
         <source-file src="src/ios/ContextSDKPlugin.m" />
+
     </platform>
 </plugin>
