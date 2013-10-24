@@ -55,8 +55,7 @@
         <resource-file src="src/ios/bundle/Settings.bundle" />
 
         <!-- Copy the libraries Context SDK -->
-        <lib-file src="src/ios/libraries/libContext.a" arch="device" />
-        <lib-file src="src/ios/libraries/libContext.a" arch="simulator" />
+        <source-file src="src/ios/frameworks/libContext.a" framework="true" />
 
         <!--Copy the native files:-->
         <header-file src="src/ios/IntelSDKPlugin.h" />
