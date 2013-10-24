@@ -52,7 +52,7 @@
         <framework src="SystemConfiguration.framework" />
 
         <!-- Copy the settings bundle for iOS -->
-        <resource-file src="bundles/Settings.bundle" />
+        <resource-file src="src/ios/bundle/Settings.bundle" />
          
         <!--Copy the native files:-->
         <header-file src="src/ios/IntelSDKPlugin.h" />
