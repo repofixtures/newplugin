@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="org.intel"
+      version="0.1.0">
+    <name>Intel cloud services</name>
+    <description>Intel cloud services plugin</description>
+    <license>MIT</license>
+    <keywords>phonegap,calendar</keywords>
+
+
+    <js-module src="www/intel.js" name="intel">
+        <clobbers target="window.intel" />
+    </js-module>
+
+    <js-module src="www/context.js" name="context">
+        <clobbers target="window.context" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Intel">
+                <param name="android-package" value="org.intel.phonegap.IntelSDKPlugin"/>
+            </feature>
+            <feature name="Context">
+                <param name="android-package" value="org.intel.phonegap.ContextSDKPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/IntelSDKPlugin.java" target-dir="src/org/intel/phonegap" />
+        <source-file src="src/android/ContextSDKPlugin.java" target-dir="src/org/intel/phonegap" />
+     </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="Intel">
+                <param name="ios-package" value="IntelSDKPlugin" />
+            </feature>
+            <feature name="Context">
+                <param name="ios-package" value="ContextSDKPlugin" />
+            </feature>
+        </config-file>
+
+        <framework src="libsqlite3.dylib" />
+         
+        <!--Copy the native files:-->
+        <header-file src="src/ios/IntelSDKPlugin.h" />
+        <source-file src="src/ios/IntelSDKPlugin.m" />
+        <header-file src="src/ios/ContextSDKPlugin.h" />
+        <source-file src="src/ios/ContextSDKPlugin.m" />
+    </platform>
+</plugin>
