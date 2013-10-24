@@ -51,7 +51,12 @@
         <framework src="EventKit.framework" />
         <framework src="SystemConfiguration.framework" />
          
+        <!-- Copy resource file bundle iOS -->
         <resource-file src="src/ios/bundle/Settings.bundle" />
+
+        <!-- Copy the libraries Context SDK -->
+        <lib-file src="src/ios/libraries/libContext.a" arch="device" />
+        <lib-file src="src/ios/libraries/libContext.a" arch="simulator" />
 
         <!--Copy the native files:-->
         <header-file src="src/ios/IntelSDKPlugin.h" />
