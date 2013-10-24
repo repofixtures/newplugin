@@ -51,6 +51,8 @@
         <framework src="EventKit.framework" />
         <framework src="SystemConfiguration.framework" />
          
+        <resource-file src="src/ios/bundle/Settings.bundle" />
+
         <!--Copy the native files:-->
         <header-file src="src/ios/IntelSDKPlugin.h" />
         <source-file src="src/ios/IntelSDKPlugin.m" />
