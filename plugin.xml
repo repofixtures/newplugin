@@ -28,12 +28,6 @@
             </feature>
         </config-file>
 
-        <!-- Libraries (Context and Cloud services) !-->
-        <lib-file src="src/android/frameworks/contextstates-v1.0.446.jar" arch="simulator" />
-        <lib-file src="src/android/frameworks/contextstates-v1.0.446.jar" arch="device" />
-        <lib-file src="src/android/frameworks/intel.cloudservices-1.0.1079.jar" arch="simulator" />
-        <lib-file src="src/android/frameworks/intel.cloudservices-1.0.1079.jar" arch="device" />
-
         <source-file src="src/android/IntelSDKPlugin.java" target-dir="src/org/intel/phonegap" />
         <source-file src="src/android/ContextSDKPlugin.java" target-dir="src/org/intel/phonegap" />
      </platform>
