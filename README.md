@@ -50,12 +50,34 @@ Initialize the callbacks for context services. This function receives the follow
 
 This function returns the allowed services for the current platform. For example, in android the "messages service" is allowed, but not on iOS.
 
-- <b>callback</b>: Collection of services objects. Each object contains "name" and "urn" properties.
+- <b>services</b>: Collection of services objects. Each object contains "name" and "urn" properties.
 
 Note: In the context.init method, must be specified "context.services" objects. The collection received by parameter in this function is not the same as context.services objects.
 
-- <b>errorCallback</b>: This parameter is a function defined by one parameter: <i>error</i>. This last parameter will contain the produced error
+- <b>errorCallback</b>: This function will be executed if occurs an error while the services was getting. The returned parameter in this function is the error.
 
 <center><h2>init(services, callback, errorCallback)</h2></center>
 
-This function initializes the list of services passed by the first parameter (must be a collection of context.services objects). If the context service has been initialized properly then function callback will be executed. Otherwise, the errorCallback function will be executed. The errorCallback function returns the error as parameter.
+This function initializes the list of services passed by the first parameter (must be a collection of context.services objects). 
+
+- <b>services</b>: The list of services to initialize.
+
+- <b>callback</b>: This function will be executed if the specified services have been initialized properly.
+
+- <b>errorCallback</b>: This function will be executed if occurs an error while the services was starting. The returned parameter in this function is the error.
+
+<center><h2>stop(services, callback, errorCallback)</h2></center>
+
+This function stops all the working providers at this moment.
+
+- <b>callback</b>: This function will be executed if the specified services have been stopped properly.
+
+- <b>errorCallback</b>: This function will be executed if occurs an error while the services was stopping. The returned parameter in this function is the error.
+
+<center><h2>checkStatus(callback, errorCallback)</h2></center>
+
+This function gets the actual status of context service.
+
+- <b>callback</b>: This function returns one parameter with the status of the context services. If the state (parameter returned by this function) is true, then the context service is already enabled, otherwise the service context is not enabled yet.
+
+- <b>errorCallback</b>: This function will be executed if occurs an error while was getting the status of the context service. The returned parameter in this function is the error.
