@@ -36,6 +36,27 @@
 
         <source-file src="src/android/IntelSDKPlugin.java" target-dir="src/org/intel/phonegap" />
         <source-file src="src/android/ContextSDKPlugin.java" target-dir="src/org/intel/phonegap" />
+
+        <!-- Android manifest !-->
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.GET_TASKS" />
+            <!-- FOR CURRENT APPS PROVIDER -->
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <!-- FOR CALL PROVIDER -->
+            <uses-permission android:name="android.permission.READ_CALENDAR" />
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+            <!-- FOR CALL PROVIDER -->
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <!-- FOR LOCATION PROVIDER -->
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <!-- FOR NETWORK PROVIDER -->
+
+            <uses-permission android:name="android.permission.WAKE_LOCK" />
+        </config-file>
+
      </platform>
 
     <!-- ios -->
