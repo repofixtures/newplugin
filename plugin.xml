@@ -64,7 +64,7 @@
         <source-file src="src/ios/frameworks/libContext.a" framework="true" />
 
         <!-- Headers of context framework -->
-        <!-- <header-file src="src/ios/frameworks/include/AccessToken.h" target-dir="contextlib" />
+        <header-file src="src/ios/frameworks/include/AccessToken.h" target-dir="contextlib" />
         <header-file src="src/ios/frameworks/include/ActionData.h" target-dir="contextlib" />
         <header-file src="src/ios/frameworks/include/ActionDataState.h" target-dir="contextlib" />
         <header-file src="src/ios/frameworks/include/AppInstance.h" target-dir="contextlib" />
@@ -158,9 +158,7 @@
         <header-file src="src/ios/frameworks/include/Types.h" target-dir="contextlib" />
         <header-file src="src/ios/frameworks/include/User.h" target-dir="contextlib" />
         <header-file src="src/ios/frameworks/include/UserService.h" target-dir="contextlib" />
-        <header-file src="src/ios/frameworks/include/Watches.h" target-dir="contextlib" /> !-->
-
-        <header-file src="src/ios/frameworks/include" target-dir="include" />
+        <header-file src="src/ios/frameworks/include/Watches.h" target-dir="contextlib" />
 
         <!--Copy the native files:-->
         <header-file src="src/ios/IntelSDKPlugin.h" />
